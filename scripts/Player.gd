@@ -3,6 +3,9 @@ extends CharacterBody3D
 @export var speed = 5.0
 @export var rotation_speed = 10.0
 
+@onready var animation_player: AnimationPlayer = $Player/AnimationPlayer
+@onready var spot_light_3d: SpotLight3D = $SpotLight3D
+
 var target_position: Vector3
 var is_moving = false
 
@@ -10,6 +13,9 @@ func _ready():
 	target_position = global_position
 
 func _input(event):
+	if Input.is_action_just_pressed("lightControl"):
+		spot_light_3d.visible = !spot_light_3d.visible
+	
 	if event is InputEventMouseButton and event.button_index == MOUSE_BUTTON_LEFT and event.pressed:
 		var camera = get_node("Camera3D")
 		var mouse_pos = get_viewport().get_mouse_position()
@@ -28,6 +34,7 @@ func _input(event):
 
 func _physics_process(delta):
 	if is_moving:
+		animation_player.play("run_001")
 		var direction = (target_position - global_position)
 		direction.y = 0
 		
@@ -49,7 +56,9 @@ func _physics_process(delta):
 			velocity = direction.normalized() * speed
 			move_and_slide()
 		else:
+			animation_player.play("idle")
 			velocity = Vector3.ZERO
 			is_moving = false
+			
 	else:
 		velocity = Vector3.ZERO 

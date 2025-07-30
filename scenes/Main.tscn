@@ -1,7 +1,13 @@
-[gd_scene load_steps=2 format=3 uid="uid://bej0v62iej2y6"]
+[gd_scene load_steps=3 format=3 uid="uid://bej0v62iej2y6"]
 
 [ext_resource type="PackedScene" uid="uid://c8xvh8yqxqxqx" path="res://scenes/Maze.tscn" id="1_maze"]
+[ext_resource type="PackedScene" uid="uid://ej0v62iej2y6" path="res://scenes/UI.tscn" id="2_rvslj"]
 
 [node name="Main" type="Node"]
 
 [node name="Maze" parent="." instance=ExtResource("1_maze")]
+
+[node name="UI" parent="." instance=ExtResource("2_rvslj")]
+
+[node name="Marker3D" type="Marker3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9.00127, 0, -8.99364)

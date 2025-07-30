@@ -19,7 +19,7 @@ albedo_color = Color(0, 1, 0, 1)
 [node name="Maze" type="Node3D"]
 
 [node name="Player" parent="." instance=ExtResource("1_player")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.672552, 0)
 
 [node name="Floor" type="StaticBody3D" parent="."]
 transform = Transform3D(20, 0, 0, 0, 1, 0, 0, 0, 20, 0, -0.5, 0)

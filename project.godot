@@ -10,6 +10,7 @@ config_version=5
 
 [application]
 
-config/name="GameJamIFPI"
+config/name="Labirinto 3D"
+run/main_scene="res://scenes/Main.tscn"
 config/features=PackedStringArray("4.4", "Forward Plus")
 config/icon="res://icon.svg"

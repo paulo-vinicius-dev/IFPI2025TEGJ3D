@@ -113,6 +113,4 @@ spot_attenuation = -0.14
 spot_angle = 50.0
 spot_angle_attenuation = 1.51572
 
-[node name="Timer" type="Timer" parent="."]
-
 [editable path="Player"]

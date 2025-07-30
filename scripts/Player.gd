@@ -5,6 +5,7 @@ extends CharacterBody3D
 
 @onready var animation_player: AnimationPlayer = $Player/AnimationPlayer
 @onready var spot_light_3d: SpotLight3D = $SpotLight3D
+@onready var timer: Timer = $Timer
 
 var target_position: Vector3
 var is_moving = false

@@ -2,6 +2,9 @@
 
 Um jogo simples de labirinto 3D desenvolvido em Godot 4.4.
 
+## Objetivo
+Chegue no final da masmorra antes que a tocha do cavaleiro acabe, navegue pelo mapa por meio de clicks pelo cénario
+
 ## Como Jogar
 
 1. **Controle**: Clique com o botão esquerdo do mouse para mover o personagem
@@ -42,6 +45,7 @@ scripts/
 
 - **Mouse Esquerdo**: Mover personagem
 - **ESC**: Sair do jogo
+- **ESPAÇO**: Apagar/Acender tocha
 
 ## Desenvolvimento
 

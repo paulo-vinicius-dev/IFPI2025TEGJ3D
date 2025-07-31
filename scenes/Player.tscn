@@ -7,7 +7,7 @@
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_1"]
 height = 2.42081
 
-[node name="Player" type="CharacterBody3D"]
+[node name="Player" type="CharacterBody3D" groups=["player"]]
 script = ExtResource("1_0x8qx")
 
 [node name="Player" parent="." instance=ExtResource("2_3li8b")]
@@ -95,9 +95,7 @@ shape = SubResource("CapsuleShape3D_1")
 
 [node name="Camera3D" type="Camera3D" parent="."]
 transform = Transform3D(-0.990616, 0.0152401, -0.135823, -0.0386571, 0.921944, 0.385389, 0.131095, 0.387023, -0.912703, 0, 2, -2.15648)
-current = true
 script = ExtResource("2_camera")
-target = NodePath("..")
 
 [node name="SpotLight3D" type="SpotLight3D" parent="."]
 transform = Transform3D(-0.997697, -9.29178e-10, 0.0678238, 0.0327915, 0.875355, 0.482368, -0.0593699, 0.483481, -0.873339, -0.636806, 0.831042, 0.495701)

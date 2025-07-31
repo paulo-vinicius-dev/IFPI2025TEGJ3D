@@ -29,6 +29,7 @@ Objetivo: Chegue ao cubo verde!"
 vertical_alignment = 1
 
 [node name="ProgressBar" type="ProgressBar" parent="."]
+visible = false
 layout_mode = 2
 offset_left = 16.0
 offset_top = 564.0

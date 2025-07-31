@@ -94,7 +94,7 @@ transform = Transform3D(1, 0, 0, 0, 0.97881, 0, 0, 0, 1, 0.00739813, 0.560596, -
 shape = SubResource("CapsuleShape3D_1")
 
 [node name="Camera3D" type="Camera3D" parent="."]
-transform = Transform3D(-0.990616, 0.0152401, -0.135823, -0.0386571, 0.921944, 0.385389, 0.131095, 0.387023, -0.912703, 0, 2, -2.15648)
+transform = Transform3D(-0.990616, 0.0152401, -0.135823, -0.0681057, 0.806555, 0.587222, 0.118498, 0.590962, -0.797949, 0, 2.23278, -1.57056)
 script = ExtResource("2_camera")
 
 [node name="SpotLight3D" type="SpotLight3D" parent="."]

@@ -1,5 +1,6 @@
-[gd_scene load_steps=12 format=3 uid="uid://c8xvh8yqxqxqx"]
+[gd_scene load_steps=13 format=3 uid="uid://c8xvh8yqxqxqx"]
 
+[ext_resource type="PackedScene" uid="uid://jnhm2c1m8t02" path="res://EndGameScreen.tscn" id="1_722ey"]
 [ext_resource type="PackedScene" uid="uid://bqxvh8yqxqxqx" path="res://scenes/Player.tscn" id="1_player"]
 [ext_resource type="Script" uid="uid://dtcrc38ywfwyb" path="res://scripts/Goal.gd" id="2_goal"]
 [ext_resource type="PackedScene" uid="uid://cigtviweumu16" path="res://scenes/Teleporter3D.tscn" id="4_722ey"]
@@ -28,8 +29,12 @@ ambient_light_energy = 0.0
 
 [node name="Maze" type="Node3D"]
 
-[node name="Player" parent="." instance=ExtResource("1_player")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.444434, 0)
+[node name="Control" parent="." instance=ExtResource("1_722ey")]
+visible = false
+
+[node name="Player" parent="." node_paths=PackedStringArray("end_screen") instance=ExtResource("1_player")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -23.4755, 0.444434, -17.8239)
+end_screen = NodePath("../Control")
 
 [node name="Floor" type="StaticBody3D" parent="."]
 transform = Transform3D(79.3873, 0, 0, 0, 1, 0, 0, 0, 67.1163, 0, -0.5, 0)

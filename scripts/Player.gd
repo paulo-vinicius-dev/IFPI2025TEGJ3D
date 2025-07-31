@@ -6,6 +6,7 @@ signal light_off_time_updated(time_remaining: float)
 
 @export var speed = 5.0
 @export var rotation_speed = 10.0
+@export var end_screen: Control
 
 @onready var animation_player: AnimationPlayer = $Player/AnimationPlayer
 @onready var spot_light_3d: SpotLight3D = $SpotLight3D
@@ -132,8 +133,10 @@ func die():
 	# Tocar animação de morte
 	if animation_player.has_animation("death"):
 		animation_player.play("death")
+		end_screen.visible = true
 	elif animation_player.has_animation("death_001"):
 		animation_player.play("death_001")
+		end_screen.visible = true
 	else:
 		animation_player.play("Idle")
 	

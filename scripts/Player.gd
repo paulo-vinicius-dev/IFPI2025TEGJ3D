@@ -134,9 +134,11 @@ func die():
 	if animation_player.has_animation("death"):
 		animation_player.play("death")
 		end_screen.visible = true
+		end_screen.label_text = "Voce falhou em achar a saida"
 	elif animation_player.has_animation("death_001"):
 		animation_player.play("death_001")
 		end_screen.visible = true
+		end_screen.label_text = "Voce falhou em achar a saida"
 	else:
 		animation_player.play("Idle")
 	

@@ -8,4 +8,5 @@ func _ready():
 func _on_body_entered(body):
 	if body.name == "Player":
 		goal_reached.emit()
-		print("Parabéns! Você chegou ao objetivo!") 
+		body.end_screen.visible = true
+		body.end_screen.label_text = "Parabéns! Você chegou ao objetivo!"

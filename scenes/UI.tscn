@@ -37,15 +37,3 @@ offset_bottom = 591.0
 size_flags_vertical = 8
 theme_override_styles/fill = SubResource("StyleBoxFlat_dj8aq")
 value = 100.0
-
-[node name="GameTimer" type="Timer" parent="."]
-autostart = true
-
-[node name="Label" type="Label" parent="."]
-layout_mode = 0
-offset_left = 888.0
-offset_top = 26.0
-offset_right = 1044.0
-offset_bottom = 65.0
-theme_override_font_sizes/font_size = 28
-text = "Tempo: 120"

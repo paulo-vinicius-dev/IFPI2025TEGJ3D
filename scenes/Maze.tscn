@@ -243,6 +243,9 @@ transform = Transform3D(-5.23021e-05, 0, -1, 0, 1, 0, 1, 0, -5.23021e-05, -18.97
 [node name="TeleporterEntry" parent="Teleporters" instance=ExtResource("4_722ey")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.0008, 4.1888)
 
+[node name="TeleporterEntry2" parent="Teleporters" instance=ExtResource("4_722ey")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -13.3287, 1.0008, 4.78661)
+
 [node name="TeleporterExit" parent="Teleporters" instance=ExtResource("4_722ey")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -14.4013, 1.14572, 22.9941)
 visible = false

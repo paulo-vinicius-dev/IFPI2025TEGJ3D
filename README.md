@@ -45,7 +45,7 @@ scripts/
 
 - **Mouse Esquerdo**: Mover personagem
 - **ESC**: Sair do jogo
-- **ESPAÇO**: Apagar/Acender tocha
+- **L**: Apagar/Acender tocha
 
 ## Desenvolvimento
 

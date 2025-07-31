@@ -31,7 +31,7 @@ ambient_light_energy = 0.0
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.444434, 0)
 
 [node name="WaterSpittingTrap" parent="." instance=ExtResource("3_cube")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.88322, 0.5, -5.61154)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.9188, 0.5, 7.08013)
 
 [node name="Floor" type="StaticBody3D" parent="."]
 transform = Transform3D(79.3873, 0, 0, 0, 1, 0, 0, 0, 67.1163, 0, -0.5, 0)

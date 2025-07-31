@@ -1,7 +1,8 @@
-[gd_scene load_steps=11 format=3 uid="uid://c8xvh8yqxqxqx"]
+[gd_scene load_steps=12 format=3 uid="uid://c8xvh8yqxqxqx"]
 
 [ext_resource type="PackedScene" uid="uid://bqxvh8yqxqxqx" path="res://scenes/Player.tscn" id="1_player"]
 [ext_resource type="Script" uid="uid://dtcrc38ywfwyb" path="res://scripts/Goal.gd" id="2_goal"]
+[ext_resource type="PackedScene" uid="uid://cigtviweumu16" path="res://scenes/Teleporter3D.tscn" id="4_722ey"]
 [ext_resource type="PackedScene" uid="uid://dpy484ua46ga4" path="res://scenes/WaterSpittingCube.tscn" id="4_i3brf"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_1"]
@@ -231,3 +232,28 @@ transform = Transform3D(-0.999888, 2.47073e-12, 0.014957, 0.0149567, 0.00657978,
 
 [node name="WaterSpittingCube8" parent="Traps" instance=ExtResource("4_i3brf")]
 transform = Transform3D(-5.23021e-05, 0, -1, 0, 1, 0, 1, 0, -5.23021e-05, -18.9785, 0.5, -2.9851)
+
+[node name="Teleporters" type="Node3D" parent="."]
+
+[node name="TeleporterEntry" parent="Teleporters" instance=ExtResource("4_722ey")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.0008, 4.1888)
+
+[node name="TeleporterExit" parent="Teleporters" instance=ExtResource("4_722ey")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -14.4013, 1.14572, 22.9941)
+visible = false
+type = 1
+
+[node name="TeleporterExit2" parent="Teleporters" instance=ExtResource("4_722ey")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -25.828, 1.14572, 7.25377)
+visible = false
+type = 1
+
+[node name="TeleporterExit3" parent="Teleporters" instance=ExtResource("4_722ey")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 19.0121, 1.14572, -19.5427)
+visible = false
+type = 1
+
+[node name="TeleporterExit4" parent="Teleporters" instance=ExtResource("4_722ey")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.0664, 1.14572, 19.6134)
+visible = false
+type = 1

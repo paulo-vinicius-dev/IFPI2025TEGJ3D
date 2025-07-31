@@ -1,0 +1,32 @@
+[gd_scene load_steps=5 format=3 uid="uid://cigtviweumu16"]
+
+[ext_resource type="Script" uid="uid://d2t1ykosbt5hd" path="res://scenes/teleporter_3d.gd" id="1_jckms"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_jckms"]
+transparency = 1
+albedo_color = Color(1, 1, 1, 0.588235)
+emission_enabled = true
+emission = Color(0, 0.768935, 0, 1)
+emission_energy_multiplier = 2.0
+
+[sub_resource type="CylinderMesh" id="CylinderMesh_jckms"]
+material = SubResource("StandardMaterial3D_jckms")
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_jckms"]
+
+[node name="Teleporter3D" type="Area3D" groups=["teleporters"]]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
+script = ExtResource("1_jckms")
+
+[node name="Label3D" type="Label3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.31947, 0)
+billboard = 1
+text = "Teleporte"
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+mesh = SubResource("CylinderMesh_jckms")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+shape = SubResource("CapsuleShape3D_jckms")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

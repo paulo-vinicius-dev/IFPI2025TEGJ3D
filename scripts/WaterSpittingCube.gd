@@ -28,4 +28,4 @@ func spit_water():
 	# Definir a direção do projétil para a frente do spitter
 	water.direction = -global_transform.basis.z.normalized()
 	water.speed = water_speed
-	water.lifetime = water_lifetime 
+	water.lifetime = water_lifetime

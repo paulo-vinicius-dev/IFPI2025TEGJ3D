@@ -28,31 +28,6 @@ text = "Clique com o botão esquerdo do mouse para mover o personagem
 Objetivo: Chegue ao cubo verde!"
 vertical_alignment = 1
 
-[node name="LightStatus" type="Label" parent="."]
-layout_mode = 2
-offset_left = 15.0
-offset_top = 100.0
-offset_right = 300.0
-offset_bottom = 130.0
-grow_horizontal = 0
-size_flags_horizontal = 0
-size_flags_vertical = 0
-theme_override_font_sizes/font_size = 18
-text = "Lanterna: LIGADA"
-vertical_alignment = 1
-
-[node name="TimeRemaining" type="Label" parent="."]
-layout_mode = 2
-offset_left = 15.0
-offset_top = 135.0
-offset_right = 300.0
-offset_bottom = 165.0
-grow_horizontal = 0
-size_flags_horizontal = 0
-size_flags_vertical = 0
-theme_override_font_sizes/font_size = 16
-vertical_alignment = 1
-
 [node name="ProgressBar" type="ProgressBar" parent="."]
 layout_mode = 2
 offset_left = 16.0

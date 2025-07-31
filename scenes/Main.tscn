@@ -1,10 +1,10 @@
 [gd_scene load_steps=3 format=3 uid="uid://bej0v62iej2y6"]
 
 [ext_resource type="PackedScene" uid="uid://c8xvh8yqxqxqx" path="res://scenes/Maze.tscn" id="1_maze"]
-[ext_resource type="PackedScene" uid="uid://ej0v62iej2y6" path="res://scenes/WaterSpittingTrap.tscn" id="2_rvslj"]
+[ext_resource type="PackedScene" uid="uid://ej0v62iej2y6" path="res://scenes/UI.tscn" id="3_ui"]
 
 [node name="Main" type="Node"]
 
 [node name="Maze" parent="." instance=ExtResource("1_maze")]
 
-[node name="UI" parent="." instance=ExtResource("2_rvslj")]
+[node name="UI" parent="." instance=ExtResource("3_ui")]

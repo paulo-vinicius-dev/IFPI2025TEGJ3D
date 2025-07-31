@@ -1,4 +1,4 @@
-[gd_scene load_steps=5 format=3 uid="uid://ej0v62iej2y6"]
+[gd_scene load_steps=5 format=3 uid="uid://dpy484ua46ga4"]
 
 [ext_resource type="Script" uid="uid://xpkj45imh4yn" path="res://scripts/WaterSpittingCube.gd" id="1_cube"]
 
@@ -11,7 +11,7 @@ roughness = 0.3
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_1"]
 
-[node name="WaterSpittingTrap" type="Node3D"]
+[node name="WaterSpittingCube" type="Node3D"]
 script = ExtResource("1_cube")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="."]

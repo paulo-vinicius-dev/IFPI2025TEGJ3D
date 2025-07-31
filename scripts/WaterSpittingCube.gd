@@ -25,7 +25,7 @@ func spit_water():
 	# Posicionar o projétil de água no ponto de spawn
 	water.global_position = water_spawn_point.global_position
 	
-	# Definir a direção do projétil
-	water.direction = spit_direction.normalized()
+	# Definir a direção do projétil para a frente do spitter
+	water.direction = -global_transform.basis.z.normalized()
 	water.speed = water_speed
 	water.lifetime = water_lifetime 

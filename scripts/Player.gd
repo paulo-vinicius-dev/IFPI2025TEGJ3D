@@ -21,7 +21,7 @@ var light_off_update_timer: Timer
 func _ready():
 	target_position = global_position
 	
-	# Criar timer para morte por falta de lanterna
+	# Timer para morte por falta de lanterna
 	light_off_timer = Timer.new()
 	light_off_timer.wait_time = death_delay
 	light_off_timer.one_shot = true
@@ -129,7 +129,7 @@ func die():
 	if light_off_update_timer:
 		light_off_update_timer.stop()
 	
-	# Tocar animação de morte (se existir)
+	# Tocar animação de morte
 	if animation_player.has_animation("death"):
 		animation_player.play("death")
 	elif animation_player.has_animation("death_001"):

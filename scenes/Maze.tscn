@@ -2,7 +2,7 @@
 
 [ext_resource type="PackedScene" uid="uid://bqxvh8yqxqxqx" path="res://scenes/Player.tscn" id="1_player"]
 [ext_resource type="Script" uid="uid://dtcrc38ywfwyb" path="res://scripts/Goal.gd" id="2_goal"]
-[ext_resource type="PackedScene" uid="uid://ej0v62iej2y6" path="res://scenes/WaterSpittingTrap.tscn" id="3_cube"]
+[ext_resource type="PackedScene" uid="uid://dpy484ua46ga4" path="res://scenes/WaterSpittingCube.tscn" id="4_i3brf"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_1"]
 
@@ -30,9 +30,6 @@ ambient_light_energy = 0.0
 [node name="Player" parent="." instance=ExtResource("1_player")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.444434, 0)
 
-[node name="WaterSpittingTrap" parent="." instance=ExtResource("3_cube")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.9188, 0.5, 7.08013)
-
 [node name="Floor" type="StaticBody3D" parent="."]
 transform = Transform3D(79.3873, 0, 0, 0, 1, 0, 0, 0, 67.1163, 0, -0.5, 0)
 
@@ -56,12 +53,14 @@ mesh = SubResource("BoxMesh_1")
 surface_material_override/0 = SubResource("StandardMaterial3D_2")
 
 [node name="Wall7" type="StaticBody3D" parent="Walls"]
-transform = Transform3D(1, 0, 0, 0, 10.7412, 0, 0, 0, 30.528, 4.0677, 4.53916, 12.6595)
+transform = Transform3D(1, 0, 0, 0, 10.7412, 0, 0, 0, 32.3602, 4.0677, 4.53916, 6.60107)
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Walls/Wall7"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1.24617, 0, 0, 0)
 shape = SubResource("BoxShape3D_1")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="Walls/Wall7"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1.24383, 0, 0, 0)
 mesh = SubResource("BoxMesh_1")
 surface_material_override/0 = SubResource("StandardMaterial3D_2")
 
@@ -147,7 +146,7 @@ directional_shadow_max_distance = 0.0
 directional_shadow_pancake_size = 0.0
 
 [node name="Goal" type="Area3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6, 0.5, 6)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 24.4716, 0.5, -19.8027)
 script = ExtResource("2_goal")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Goal"]
@@ -159,3 +158,76 @@ surface_material_override/0 = SubResource("StandardMaterial3D_3")
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
 environment = SubResource("Environment_my7j6")
+
+[node name="Traps" type="Node3D" parent="."]
+
+[node name="WaterSpittingCube2" parent="Traps" instance=ExtResource("4_i3brf")]
+transform = Transform3D(-0.999888, 0, 0.014957, 0, 1, 0, -0.014957, 0, -0.999888, -4.10911, 0.5, -24.0537)
+
+[node name="WaterSpittingCube3" parent="Traps" instance=ExtResource("4_i3brf")]
+transform = Transform3D(0.999958, 0, 0.00916285, 0, 1, 0, -0.00916285, 0, 0.999958, -25, 0.5, 26.0639)
+
+[node name="WaterSpittingCube4" parent="Traps" instance=ExtResource("4_i3brf")]
+transform = Transform3D(0.999958, 0, 0.00916285, 0, 1, 0, -0.00916285, 0, 0.999958, 7.95988, 0.5, 26.0243)
+
+[node name="WaterSpittingCube5" parent="Traps" instance=ExtResource("4_i3brf")]
+transform = Transform3D(0.00883115, 0, 0.999961, 0, 1, 0, -0.999961, 0, 0.00883115, 10.9901, 0.5, -17.6833)
+
+[node name="WaterSpittingCube6" parent="Traps" instance=ExtResource("4_i3brf")]
+transform = Transform3D(-5.23021e-05, 0, -1, 0, 1, 0, 1, 0, -5.23021e-05, -7.86948, 0.5, 4.51797)
+
+[node name="WaterSpittingCube7" parent="Traps" instance=ExtResource("4_i3brf")]
+transform = Transform3D(0.00883115, 0, 0.999961, 0, 1, 0, -0.999961, 0, 0.00883115, -7.9016, 0.5, -9.30091)
+
+[node name="GoalTrap" type="Node3D" parent="Traps"]
+
+[node name="WaterSpittingCube2" parent="Traps/GoalTrap" instance=ExtResource("4_i3brf")]
+transform = Transform3D(-0.999888, 2.47073e-12, 0.014957, 0.0149567, 0.00657978, 0.999866, -9.8414e-05, 0.999978, -0.00657905, 15.2216, 8.02648, -7.27429)
+
+[node name="WaterSpittingCube3" parent="Traps/GoalTrap" instance=ExtResource("4_i3brf")]
+transform = Transform3D(-0.999888, 2.47073e-12, 0.014957, 0.0149567, 0.00657978, 0.999866, -9.8414e-05, 0.999978, -0.00657905, 14.1486, 8.02648, -7.27429)
+
+[node name="WaterSpittingCube4" parent="Traps/GoalTrap" instance=ExtResource("4_i3brf")]
+transform = Transform3D(-0.999888, 2.47073e-12, 0.014957, 0.0149567, 0.00657978, 0.999866, -9.8414e-05, 0.999978, -0.00657905, 13.0975, 8.02648, -7.27429)
+
+[node name="WaterSpittingCube5" parent="Traps/GoalTrap" instance=ExtResource("4_i3brf")]
+transform = Transform3D(-0.999888, 2.47073e-12, 0.014957, 0.0149567, 0.00657978, 0.999866, -9.8414e-05, 0.999978, -0.00657905, 11.9128, 8.02648, -7.27429)
+
+[node name="WaterSpittingCube6" parent="Traps/GoalTrap" instance=ExtResource("4_i3brf")]
+transform = Transform3D(-0.999888, 2.47073e-12, 0.014957, 0.0149567, 0.00657978, 0.999866, -9.8414e-05, 0.999978, -0.00657905, 19.5204, 8.02648, -7.27429)
+
+[node name="WaterSpittingCube7" parent="Traps/GoalTrap" instance=ExtResource("4_i3brf")]
+transform = Transform3D(-0.999888, 2.47073e-12, 0.014957, 0.0149567, 0.00657978, 0.999866, -9.8414e-05, 0.999978, -0.00657905, 18.4473, 8.02648, -7.27429)
+
+[node name="WaterSpittingCube8" parent="Traps/GoalTrap" instance=ExtResource("4_i3brf")]
+transform = Transform3D(-0.999888, 2.47073e-12, 0.014957, 0.0149567, 0.00657978, 0.999866, -9.8414e-05, 0.999978, -0.00657905, 17.3963, 8.02648, -7.27429)
+
+[node name="WaterSpittingCube9" parent="Traps/GoalTrap" instance=ExtResource("4_i3brf")]
+transform = Transform3D(-0.999888, 2.47073e-12, 0.014957, 0.0149567, 0.00657978, 0.999866, -9.8414e-05, 0.999978, -0.00657905, 16.2115, 8.02648, -7.27429)
+
+[node name="WaterSpittingCube10" parent="Traps/GoalTrap" instance=ExtResource("4_i3brf")]
+transform = Transform3D(-0.999888, 2.47073e-12, 0.014957, 0.0149567, 0.00657978, 0.999866, -9.8414e-05, 0.999978, -0.00657905, 23.7845, 8.02648, -7.27429)
+
+[node name="WaterSpittingCube11" parent="Traps/GoalTrap" instance=ExtResource("4_i3brf")]
+transform = Transform3D(-0.999888, 2.47073e-12, 0.014957, 0.0149567, 0.00657978, 0.999866, -9.8414e-05, 0.999978, -0.00657905, 22.7115, 8.02648, -7.27429)
+
+[node name="WaterSpittingCube12" parent="Traps/GoalTrap" instance=ExtResource("4_i3brf")]
+transform = Transform3D(-0.999888, 2.47073e-12, 0.014957, 0.0149567, 0.00657978, 0.999866, -9.8414e-05, 0.999978, -0.00657905, 21.6604, 8.02648, -7.27429)
+
+[node name="WaterSpittingCube13" parent="Traps/GoalTrap" instance=ExtResource("4_i3brf")]
+transform = Transform3D(-0.999888, 2.47073e-12, 0.014957, 0.0149567, 0.00657978, 0.999866, -9.8414e-05, 0.999978, -0.00657905, 20.4757, 8.02648, -7.27429)
+
+[node name="WaterSpittingCube14" parent="Traps/GoalTrap" instance=ExtResource("4_i3brf")]
+transform = Transform3D(-0.999888, 2.47073e-12, 0.014957, 0.0149567, 0.00657978, 0.999866, -9.8414e-05, 0.999978, -0.00657905, 27.916, 8.02648, -7.27429)
+
+[node name="WaterSpittingCube15" parent="Traps/GoalTrap" instance=ExtResource("4_i3brf")]
+transform = Transform3D(-0.999888, 2.47073e-12, 0.014957, 0.0149567, 0.00657978, 0.999866, -9.8414e-05, 0.999978, -0.00657905, 26.8429, 8.02648, -7.27429)
+
+[node name="WaterSpittingCube16" parent="Traps/GoalTrap" instance=ExtResource("4_i3brf")]
+transform = Transform3D(-0.999888, 2.47073e-12, 0.014957, 0.0149567, 0.00657978, 0.999866, -9.8414e-05, 0.999978, -0.00657905, 25.7919, 8.02648, -7.27429)
+
+[node name="WaterSpittingCube17" parent="Traps/GoalTrap" instance=ExtResource("4_i3brf")]
+transform = Transform3D(-0.999888, 2.47073e-12, 0.014957, 0.0149567, 0.00657978, 0.999866, -9.8414e-05, 0.999978, -0.00657905, 24.6071, 8.02648, -7.27429)
+
+[node name="WaterSpittingCube8" parent="Traps" instance=ExtResource("4_i3brf")]
+transform = Transform3D(-5.23021e-05, 0, -1, 0, 1, 0, 1, 0, -5.23021e-05, -18.9785, 0.5, -2.9851)
